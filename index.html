@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Special Messages</title>
+<style>
+    body {
+        margin: 0;
+        font-family: 'Segoe UI', sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background: #ffe6f0;
+        color: #333;
+        text-align: center;
+    }
+    .page {
+        display: none;
+        width: 90%;
+        max-width: 500px;
+    }
+    .active { display: block; }
+    h1 {
+        font-size: 2.5em;
+        margin-bottom: 30px;
+    }
+    button {
+        padding: 10px 25px;
+        font-size: 1em;
+        border: none;
+        border-radius: 8px;
+        background: #ff6699;
+        color: white;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+    button:hover { background: #ff3366; }
+</style>
+</head>
+<body>
+
+<!-- Page 1 -->
+<div class="page active" id="page1">
+    <h1>MYRE</h1>
+    <button onclick="nextPage(1)">Next</button>
+</div>
+
+<!-- Page 2 -->
+<div class="page" id="page2">
+    <h1>NAINTE MWONE</h1>
+    <button onclick="nextPage(2)">Next</button>
+</div>
+
+<!-- Page 3 -->
+<div class="page" id="page3">
+    <h1>POORI MWONE</h1>
+    <button onclick="nextPage(3)">Next</button>
+</div>
+
+<!-- Page 4 -->
+<div class="page" id="page4">
+    <h1>POLAYADI MWONE</h1>
+    <button onclick="nextPage(4)">Next</button>
+</div>
+
+<!-- Page 5 -->
+<div class="page" id="page5">
+    <h1>APPO SHERI MYRE BYE 😊</h1>
+</div>
+
+<script>
+function nextPage(current) {
+    document.getElementById('page' + current).classList.remove('active');
+    document.getElementById('page' + (current + 1)).classList.add('active');
+}
+</script>
+
+</body>
+</html>
